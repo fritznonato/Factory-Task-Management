@@ -46,7 +46,7 @@ app.UseStaticFiles();
 app.MapFallbackToFile("index.html"); // Serve index.html for any non-API routes
 app.Run();
 
-// Here is the correct place for the class definition.
+// Class definition for seeding the database
 public static class DatabaseSeeder
 {
     public static void SeedUsers(ApplicationDbContext context)
@@ -63,6 +63,4 @@ public static class DatabaseSeeder
             context.SaveChanges();
         }
     }
-
 }
-
