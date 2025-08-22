@@ -68,7 +68,7 @@ const TaskForm = ({ onTaskAdded }: TaskFormProps) => {
                     <option value="Completed">Completed</option>
                 </select>
             </p>
-            <p className="control">
+            <div className="control">
                 <div className="select">
                     <select 
                     value={assignedUserId}
@@ -81,7 +81,7 @@ const TaskForm = ({ onTaskAdded }: TaskFormProps) => {
                         ))}
                     </select>
                 </div>
-            </p>
+            </div>
             <p className="control">
                 <button type="submit" className="button is-primary">Add Task</button>
             </p>
