@@ -9,7 +9,6 @@ type TaskListProps = {
 
 const TaskList = ({ tasks, users, onTaskUpdated, onTaskDeleted }: TaskListProps) => {
     
-    // ... (handleDelete and handleUpdate functions are correct and don't need changes)
     const handleDelete = async (taskId: number) => {
         const confirmed = window.confirm("Are you sure you want to delete this task?");
         if (confirmed) {
