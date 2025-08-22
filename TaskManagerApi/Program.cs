@@ -43,6 +43,7 @@ app.UseAuthorization();
 app.MapControllers();
 app.UseDefaultFiles();
 app.UseStaticFiles();
+app.MapFallbackToFile("index.html"); // Serve index.html for any non-API routes
 app.Run();
 
 // Here is the correct place for the class definition.
@@ -64,3 +65,4 @@ public static class DatabaseSeeder
     }
 
 }
+
