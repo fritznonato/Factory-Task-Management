@@ -9,7 +9,7 @@ const TaskForm = ({ onTaskAdded }: TaskFormProps) => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [status, setStatus] = useState('Pending');
-    const [assignedUserId, setAssignedUserId] = useState(1);
+    const [assignedUserId, setAssignedUserId] = useState<number | ''>(''); 
     const [users, setUsers] = useState<User[]>([]);
 
     useEffect(() => {
@@ -17,12 +17,19 @@ const TaskForm = ({ onTaskAdded }: TaskFormProps) => {
             const response = await fetch('http://localhost:5285/api/Users');
             const data = await response.json();
             setUsers(data);
+
+            //If we get users, set the default selected user to the first one in the list.
+            if (data.length > 0) {
+                setAssignedUserId(data[0].id);
+            }
         };
         fetchUsers();
     }, []);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        if (!assignedUserId) return;
+
         const newTask = { title, description, status, assignedUserId };
 
         await fetch('http://localhost:5285/api/Tasks', {
@@ -61,18 +68,19 @@ const TaskForm = ({ onTaskAdded }: TaskFormProps) => {
                     required
                 />
             </p>
-            <p className="control">
+            <div className="control">
                 <select className="select" value={status} onChange={(e) => setStatus(e.target.value)}>
                     <option value="Pending">Pending</option>
                     <option value="In Progress">In Progress</option>
                     <option value="Completed">Completed</option>
                 </select>
-            </p>
+            </div>
             <div className="control">
                 <div className="select">
                     <select 
-                    value={assignedUserId}
-                    onChange={(e) => setAssignedUserId(Number(e.target.value))}
+                        value={assignedUserId}
+                        onChange={(e) => setAssignedUserId(Number(e.target.value))}
+                        disabled={users.length === 0} // Disable dropdown if no users
                     >
                         {users.map((user) => (
                             <option key={user.id} value={user.id}>
@@ -83,7 +91,10 @@ const TaskForm = ({ onTaskAdded }: TaskFormProps) => {
                 </div>
             </div>
             <p className="control">
-                <button type="submit" className="button is-primary">Add Task</button>
+                {/* Disable button if no users are loaded */}
+                <button type="submit" className="button is-primary" disabled={users.length === 0}>
+                    Add Task
+                </button>
             </p>
         </form>
     );
