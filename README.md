@@ -29,20 +29,22 @@ Backend (API): C# and ASP.NET Core, Entity Framework Core, SQLite
 Frontend (UI): React, TypeScript, Vite, Bulma (with custom styling)
 
 🚀 How to Run the Project
-T
-o run this project, you will need the .NET SDK and Node.js installed on your machine.
+
+To run this project, you will need the .NET SDK and Node.js installed on your machine.
 
 1. Clone the repository:
 
 Bash
 
 git clone https://github.com/your-username/your-repo-name.git
+
 2. Navigate to the backend directory and run it:
 
 Bash
 
 cd TaskManagerApi
 dotnet run
+
 The backend will be listening on http://localhost:5285/.
 
 3. In a new terminal, navigate to the frontend directory and run it:
@@ -52,6 +54,7 @@ Bash
 cd ../task-manager-ui
 npm install
 npm run dev
+
 The application will be running at http://localhost:5173/.
 
 🧠 Challenges and Learning
