@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EyfxGW1lAyw=",
+  "dgSpecHash": "16Tftgvz+PI=",
   "success": true,
-  "projectFilePath": "/Users/dazrenefritz/development/Factory Floor Task Management App/TaskManagerApi/TaskManagerApi/TaskManagerApi.csproj",
+  "projectFilePath": "/Users/dazrenefritz/Factory-Task-Management/TaskManagerApi/TaskManagerApi.csproj",
   "expectedPackageFiles": [
     "/Users/dazrenefritz/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/dazrenefritz/.nuget/packages/microsoft.aspnetcore.openapi/9.0.8/microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",

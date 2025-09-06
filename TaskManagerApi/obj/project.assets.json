@@ -3148,11 +3148,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dazrenefritz/development/Factory Floor Task Management App/TaskManagerApi/TaskManagerApi/TaskManagerApi.csproj",
+      "projectUniqueName": "/Users/dazrenefritz/Factory-Task-Management/TaskManagerApi/TaskManagerApi.csproj",
       "projectName": "TaskManagerApi",
-      "projectPath": "/Users/dazrenefritz/development/Factory Floor Task Management App/TaskManagerApi/TaskManagerApi/TaskManagerApi.csproj",
+      "projectPath": "/Users/dazrenefritz/Factory-Task-Management/TaskManagerApi/TaskManagerApi.csproj",
       "packagesPath": "/Users/dazrenefritz/.nuget/packages/",
-      "outputPath": "/Users/dazrenefritz/development/Factory Floor Task Management App/TaskManagerApi/TaskManagerApi/obj/",
+      "outputPath": "/Users/dazrenefritz/Factory-Task-Management/TaskManagerApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/dazrenefritz/.nuget/NuGet/NuGet.Config"
